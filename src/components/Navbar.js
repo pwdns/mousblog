@@ -39,7 +39,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6 relative">
         <Link href="/" className="flex items-center gap-2 text-white hover:text-blue-400 transition">
           <img src="/logo.png" alt="Logo" className="w-6 h-6 object-contain" />
-          <span className="text-xl font-bold">MouseBlog</span>
+          <span className="text-xl font-bold">MousBlog</span>
         </Link>
 
         <div className="relative w-full max-w-md">
