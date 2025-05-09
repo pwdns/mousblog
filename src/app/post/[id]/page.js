@@ -25,12 +25,12 @@ export default async function PostPage({ params }) {
   const post = await getPostById(params.id);
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-10 bg-gray-900 text-white min-h-screen">
-      <article className="mb-10 bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
-        <h1 className="text-3xl font-bold text-blue-400 mb-2">{post.title}</h1>
-        <p className="text-sm text-gray-400">Written by: {post.author || 'Anonymous'}</p>
-        <p className="text-xs text-gray-500 mb-4">🕒 {timeAgo(post.created_at)}</p>
-        <p className="whitespace-pre-line text-gray-100 leading-relaxed">{post.content}</p>
+    <div className="max-w-3xl mx-auto px-6 py-10 bg-neutral-900 text-white min-h-screen">
+      <article className="mb-10 bg-neutral-800 p-6 rounded-lg shadow-lg border border-neutral-700">
+        <h1 className="text-3xl font-bold text-gray-400 mb-2">{post.title}</h1>
+        <p className="text-sm text-neutral-400">Written by: {post.author || 'Anonymous'}</p>
+        <p className="text-xs text-neutral-500 mb-4">🕒 {timeAgo(post.created_at)}</p>
+        <p className="whitespace-pre-line text-neutral-100 leading-relaxed">{post.content}</p>
       </article>
 
       <section>

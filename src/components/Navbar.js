@@ -35,9 +35,9 @@ export default function Navbar() {
   }, [query, allPosts]);
 
   return (
-    <nav className="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+    <nav className="bg-neutral-900 text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6 relative">
-        <Link href="/" className="flex items-center gap-2 text-white hover:text-blue-400 transition">
+        <Link href="/" className="flex items-center gap-2 text-white hover:text-gray-400 transition">
           <img src="/logo2.png" alt="Logo" className="w-6 h-6 object-contain" />
           <span className="text-xl font-bold">MousBlog</span>
         </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
               placeholder="Search posts..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+              className="w-full px-4 py-2 rounded-md bg-neutral-800 border border-neutral-600 focus:outline-none focus:ring-2 focus:ring-gray-600 text-white"
             />
           </form>
           {results.length > 0 && (
@@ -68,7 +68,7 @@ export default function Navbar() {
         </div>
 
         <Link href="/create">
-          <button className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition">
+          <button className="px-5 py-2 bg-amber-700 hover:bg-amber-800 text-white rounded-md font-medium transition">
             + Create Post
           </button>
         </Link>

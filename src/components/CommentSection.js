@@ -72,7 +72,7 @@ export default function CommentSection({ postId }) {
       .map(comment => {
         const childReplies = comments.filter(c => c.parent_id === comment.id);
         return (
-          <div key={comment.id} className={`mt-4 ${level > 0 ? 'ml-6 border-l-2 border-blue-400 pl-4' : ''}`}>
+          <div key={comment.id} className={`mt-4 ${level > 0 ? 'ml-6 border-l-2 border-amber-400 pl-4' : ''}`}>
             <div className="bg-gray-800 text-white p-3 rounded-md shadow-md border border-gray-700">
               {level > 0 && (
                 <p className="text-xs text-gray-400 mb-1">
@@ -82,9 +82,9 @@ export default function CommentSection({ postId }) {
               <p>{comment.content}</p>
               <p className="text-xs text-gray-400 mt-1">🕒 {timeAgo(comment.created_at)}</p>
               <div className="flex gap-3 mt-1 text-sm">
-                <button onClick={() => setReplyTo(comment.id)} className="text-blue-400 hover:underline">Reply</button>
+                <button onClick={() => setReplyTo(comment.id)} className="text-amber-400 hover:underline">Reply</button>
                 {childReplies.length > 0 && (
-                  <button onClick={() => toggleReplies(comment.id)} className="text-blue-300 hover:underline">
+                  <button onClick={() => toggleReplies(comment.id)} className="text-amber-300 hover:underline">
                     {expandedReplies[comment.id] ? 'Hide replies' : `Show ${childReplies.length} repl${childReplies.length > 1 ? 'ies' : 'y'}`}
                   </button>
                 )}
@@ -98,7 +98,7 @@ export default function CommentSection({ postId }) {
                     onChange={(e) => setReplyContent(e.target.value)}
                   />
                   <div className="flex gap-2 mt-1">
-                    <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm">
+                    <button type="submit" className="bg-amber-600 hover:bg-amber-700 text-white px-3 py-1 rounded-md text-sm">
                       Post Reply
                     </button>
                     <button type="button" onClick={() => { setReplyTo(null); setReplyContent(''); }} className="text-red-400 text-sm">Cancel</button>
@@ -117,14 +117,14 @@ export default function CommentSection({ postId }) {
       <form onSubmit={handleSubmit} className="mb-4">
         <textarea
           placeholder="Leave a comment..."
-          className="w-full p-3 border border-gray-500 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-500 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
           rows={3}
         />
         <button
           type="submit"
-          className="mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md"
+          className="mt-2 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md"
         >
           Post
         </button>

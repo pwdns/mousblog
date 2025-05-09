@@ -44,7 +44,7 @@ export default function CreatePage() {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-gray-900 text-white rounded-lg shadow-lg mt-10">
+    <div className="max-w-xl mx-auto p-6 bg-neutral-900 text-white rounded-lg shadow-lg mt-10">
       <h1 className="text-3xl font-bold mb-6 text-center">📝 Create New Post</h1>
 
       <div className="space-y-5">
@@ -53,7 +53,7 @@ export default function CreatePage() {
           <input
             type="text"
             placeholder="Type here..."
-            className="w-full p-3 bg-black border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 bg-black border border-neutral-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
             value={formData.author}
             onChange={(e) => setFormData({...formData, author: e.target.value})}
           />
@@ -65,7 +65,7 @@ export default function CreatePage() {
           <input
             type="text"
             placeholder="Type here..."
-            className="w-full p-3 bg-black border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 bg-black border border-neutral-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
             value={formData.title}
             onChange={(e) => setFormData({...formData, title: e.target.value})}
           />
@@ -76,7 +76,7 @@ export default function CreatePage() {
           <label className="block text-sm font-medium mb-1">What's in your mind?</label>
           <textarea
             placeholder="Type here..."
-            className="w-full p-3 bg-black border border-gray-600 rounded-md h-36 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 bg-black border border-neutral-600 rounded-md h-36 focus:outline-none focus:ring-2 focus:ring-gray-500"
             value={formData.content}
             onChange={(e) => setFormData({...formData, content: e.target.value})}
           />
@@ -84,7 +84,7 @@ export default function CreatePage() {
         </div>
 
         {statusMessage && (
-          <div className="p-3 text-sm text-center bg-gray-800 rounded-md text-green-400">
+          <div className="p-3 text-sm text-center bg-neutral-800 rounded-md text-gray-400">
             {statusMessage}
           </div>
         )}
@@ -95,14 +95,14 @@ export default function CreatePage() {
             <div className="flex gap-3">
               <button
                 type="button"
-                className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-md"
+                className="px-4 py-2 bg-neutral-700 hover:bg-neutral-600 text-white rounded-md"
                 onClick={() => setShowConfirm(false)}
               >
                 Cancel
               </button>
               <button
                 type="button"
-                className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md"
+                className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-md"
                 onClick={handleSubmit}
               >
                 Yes, Publish
@@ -113,14 +113,14 @@ export default function CreatePage() {
           <div className="flex gap-3">
             <button
               type="button"
-              className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-md"
+              className="px-4 py-2 bg-neutral-700 hover:bg-neutral-600 text-white rounded-md"
               onClick={() => router.push('/')}
             >
               Cancel
             </button>
             <button
               type="button"
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md"
+              className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-md"
               onClick={() => {
                 if (validateForm()) setShowConfirm(true);
               }}
