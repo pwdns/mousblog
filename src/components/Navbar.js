@@ -38,7 +38,7 @@ export default function Navbar() {
     <nav className="bg-gray-900 text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6 relative">
         <Link href="/" className="flex items-center gap-2 text-white hover:text-blue-400 transition">
-          <img src="/logo.png" alt="Logo" className="w-6 h-6 object-contain" />
+          <img src="/logo2.png" alt="Logo" className="w-6 h-6 object-contain" />
           <span className="text-xl font-bold">MousBlog</span>
         </Link>
 
